@@ -16,7 +16,6 @@ public class CategoriaEntity {
     private Long id;
     @Column(name = "nome", nullable = false, unique = true)
     private String nome;
-
     @OneToMany(mappedBy = "categoria")
     private List<LivroEntity> livros;
 

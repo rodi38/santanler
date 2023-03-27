@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "editora")
@@ -17,4 +19,7 @@ public class EditoraEntity {
     private String nome;
     @Column(name = "descricao")
     private String descricao;
+
+    @OneToMany(mappedBy = "editora")
+    private List<CategoriaEntity> categorias;
 }
