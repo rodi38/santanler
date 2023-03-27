@@ -1,4 +1,4 @@
 package com.livrariasantanler.santanler.controller;
 
-public class LivrariaController {
+public class EditoraController {
 }

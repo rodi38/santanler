@@ -4,21 +4,17 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.List;
-
 @Data
 @Entity
 @Table(name = "editora")
 @ToString
-public class CategoriaEntity {
+public class EditoraEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "nome", nullable = false, unique = true)
     private String nome;
-
-    @OneToMany(mappedBy = "categoria")
-    private List<LivroEntity> livros;
-
-
+    @Column(name = "descricao")
+    private String descricao;
 }
