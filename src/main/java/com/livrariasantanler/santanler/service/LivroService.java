@@ -1,12 +1,8 @@
 package com.livrariasantanler.santanler.service;
 
-import com.livrariasantanler.santanler.model.dto.CategoriaDTO;
 import com.livrariasantanler.santanler.model.dto.LivroDTO;
-import com.livrariasantanler.santanler.model.entity.CategoriaEntity;
 import com.livrariasantanler.santanler.model.entity.LivroEntity;
-import com.livrariasantanler.santanler.model.mapper.CategoriaMapper;
 import com.livrariasantanler.santanler.model.mapper.LivroMapper;
-import com.livrariasantanler.santanler.repository.CategoriaRepository;
 import com.livrariasantanler.santanler.repository.LivroRepository;
 import jakarta.persistence.EntityNotFoundException;
 
