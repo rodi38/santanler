@@ -1,8 +1,6 @@
 package com.livrariasantanler.santanler.service;
 
-import com.livrariasantanler.santanler.model.dto.CategoriaDTO;
 import com.livrariasantanler.santanler.model.dto.EditoraDTO;
-import com.livrariasantanler.santanler.model.entity.CategoriaEntity;
 import com.livrariasantanler.santanler.model.entity.EditoraEntity;
 import com.livrariasantanler.santanler.model.mapper.EditoraMapper;
 import com.livrariasantanler.santanler.repository.EditoraRepository;
