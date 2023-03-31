@@ -17,8 +17,9 @@ Clique no botão azul com o nome code na pagina inicial do projeto e baixe o zip
 - [x] Estrutura inicial
 - [x] Concluir camada model
 - [X] Concluir camada service
-- [ ] Concluir camada controller
+- [X] Concluir camada controller
 - [X] Concluir repository
+- [ ] Integrar com o H2
 
 
 <h3>EXTRA</h3>
