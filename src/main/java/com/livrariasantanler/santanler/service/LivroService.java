@@ -5,10 +5,11 @@ import com.livrariasantanler.santanler.model.entity.LivroEntity;
 import com.livrariasantanler.santanler.model.mapper.LivroMapper;
 import com.livrariasantanler.santanler.repository.LivroRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class LivroService {
     private LivroRepository repository;
     private LivroMapper mapper;
