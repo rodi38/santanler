@@ -12,7 +12,6 @@ public class CategoriaDTO {
     @Size(max=100, message = "Tamanho do nome acima do valor")
     @NotBlank(message = "Nome deve conter algum valor")
     private String nome;
-    private List<LivroDTO> livros;
 
 
 }

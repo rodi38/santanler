@@ -2,14 +2,12 @@ package com.livrariasantanler.santanler.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.ToString;
 
 import java.util.List;
 
 @Data
 @Entity
 @Table(name = "editora")
-@ToString
 public class EditoraEntity {
 
     @Id
@@ -21,5 +19,5 @@ public class EditoraEntity {
     private String descricao;
 
     @OneToMany(mappedBy = "editora")
-    private List<CategoriaEntity> categorias;
+    private List<LivroEntity> livros;
 }

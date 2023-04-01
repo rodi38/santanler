@@ -2,14 +2,12 @@ package com.livrariasantanler.santanler.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.ToString;
 
 import java.util.List;
 
 @Data
 @Entity
 @Table(name = "editora")
-@ToString
 public class CategoriaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

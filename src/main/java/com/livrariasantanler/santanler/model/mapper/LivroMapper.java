@@ -1,7 +1,6 @@
 package com.livrariasantanler.santanler.model.mapper;
 
 import com.livrariasantanler.santanler.model.dto.LivroDTO;
-import com.livrariasantanler.santanler.model.entity.EditoraEntity;
 import com.livrariasantanler.santanler.model.entity.LivroEntity;
 import org.springframework.stereotype.Component;
 
@@ -16,8 +15,8 @@ public class LivroMapper {
         livroDTO.setId(livro.getId());
         livroDTO.setNome(livro.getNome());
         livroDTO.setIsbn(livro.getIsbn());
-        livroDTO.setCategoria(categoriaMapper.update(livro.getCategoriaEntity()));
-        livroDTO.setEditora(editoraMapper.update(livro.getEditoraEntity()));
+        livroDTO.setCategoria(categoriaMapper.update(livro.getCategoria()));
+        livroDTO.setEditora(editoraMapper.update(livro.getEditora()));
         return livroDTO;
     }
 
@@ -26,8 +25,8 @@ public class LivroMapper {
         livroEntity.setId(livro.getId());
         livroEntity.setNome(livro.getNome());
         livroEntity.setIsbn(livro.getIsbn());
-        livroEntity.setCategoriaEntity(categoriaMapper.update(livro.getCategoria()));
-        livroEntity.setEditoraEntity(editoraMapper.update(livro.getEditora()));
+        livroEntity.setCategoria(categoriaMapper.update(livro.getCategoria()));
+        livroEntity.setEditora(editoraMapper.update(livro.getEditora()));
         return livroEntity;
     }
 

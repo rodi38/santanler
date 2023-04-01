@@ -17,6 +17,5 @@ public class EditoraDTO {
     @NotBlank(message = "Nome deve conter algum valor")
     private String nome;
     private String descricao;
-    private List<CategoriaDTO> categorias;
 
 }

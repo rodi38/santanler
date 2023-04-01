@@ -5,6 +5,7 @@ import com.livrariasantanler.santanler.model.entity.CategoriaEntity;
 import com.livrariasantanler.santanler.model.mapper.CategoriaMapper;
 import com.livrariasantanler.santanler.repository.CategoriaRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +13,9 @@ import java.util.Optional;
 
 @Service
 public class CategoriaService {
+    @Autowired
     private CategoriaRepository repository;
+    @Autowired
     private CategoriaMapper mapper;
 
     public CategoriaDTO pegarPorId(Long id) {
