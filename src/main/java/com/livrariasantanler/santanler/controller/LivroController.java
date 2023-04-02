@@ -31,6 +31,7 @@ public class LivroController {
                     .body(new MensagemDTO(e.getMessage()));
         }
     }
+    //pegarPorNomeOuIsbn
 
     @GetMapping("/{id}")
     public ResponseEntity<Object> pegarUm(@PathVariable("id") Long id) {
@@ -41,6 +42,37 @@ public class LivroController {
             return ResponseEntity
                     .status(HttpStatus.NO_CONTENT)
                     .body(new MensagemDTO(e.getMessage()));
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
+                    .body(new MensagemDTO(e.getMessage()));
+        }
+    }
+
+    @GetMapping("/{name}")
+    public ResponseEntity<Object> pegarPorNome
+            (@PathVariable("nome") String nome) {
+        try {
+            return ResponseEntity.ok(livroService.pegarPorNome(nome));
+        } catch (EntityNotFoundException e){
+            log.error(e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new MensagemDTO(e.getMessage()));
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
+                    .body(new MensagemDTO(e.getMessage()));
+        }
+    }
+    @GetMapping("/{isbn}")
+    public ResponseEntity<Object> pegarPorIsbn
+            (@PathVariable("isbn") String isbn) {
+        try {
+            return ResponseEntity.ok(livroService.pegarPorIsbn(isbn));
+        } catch (EntityNotFoundException e){
+            log.error(e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new MensagemDTO(e.getMessage()));
         } catch (Exception e) {
             log.error(e.getMessage());
             return ResponseEntity

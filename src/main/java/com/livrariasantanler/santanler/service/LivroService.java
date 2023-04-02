@@ -25,6 +25,21 @@ public class LivroService {
         }
         throw new EntityNotFoundException("Livro não encontrado, revisa isso ai meu chapa!");
     }
+    public List<LivroDTO> pegarPorNome(String nome) {
+        if (!repository.findByNome(nome).isEmpty()){
+            List<LivroEntity> livroEntities = repository.findByNome(nome);
+            return mapper.updateListDTO(livroEntities);
+        }
+        throw new EntityNotFoundException("Livro não encontrado, revisa isso ai meu chapa!");
+    }
+
+    public LivroDTO pegarPorIsbn(String isbn) {
+        if (!repository.findByNome(isbn).isEmpty()){
+            LivroEntity livroEntity = repository.findByIsbn(isbn);
+            return mapper.update(livroEntity);
+        }
+        throw new EntityNotFoundException("Livro não encontrado, revisa isso ai meu chapa!");
+    }
 
     public LivroDTO criar(LivroDTO livroDTO) {
         LivroEntity livro = mapper.update(livroDTO);
